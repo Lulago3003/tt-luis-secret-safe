@@ -3,8 +3,8 @@
 # Flappy Luis - a video game chip for Tiny Tapeout
 
 A Flappy-style VGA game made only of digital logic: 640x480 color video, parallax city background,
-pixel-perfect collisions, score and best score, sound effects, Gamepad Pmod support and an autopilot
-demo mode. Designed by Luis Lasso.
+pixel-perfect collisions, score and best score, sound effects and an autopilot demo mode, all in a
+single Tiny Tapeout tile. Designed by Luis Lasso.
 
 - [Read the datasheet](docs/info.md)
 - Play it in your browser: [VGA Playground](https://vga-playground.com/?repo=https://github.com/Lulago3003/tt-luis-secret-safe)
@@ -13,10 +13,9 @@ demo mode. Designed by Luis Lasso.
 
 | Input | Function |
 |-------|----------|
-| Gamepad A / B / X / Y / Up / Start | Flap |
-| `ui[0]` | Flap (every change of the switch is one flap) |
-| `ui[1]` | Autopilot / demo mode |
-| `ui[7]` | Easy mode |
+| `ui[0]` | Flap (every change of the switch is one flap; key `0` in the VGA Playground) |
+| `ui[2]` | Flap (push button, one flap per press) |
+| `ui[1]` | Autopilot / demo mode (key `1` in the VGA Playground) |
 
 ## What is Tiny Tapeout?
 

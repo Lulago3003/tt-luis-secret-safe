@@ -3,7 +3,7 @@ project:
   title:        "Flappy Luis"      # Project title
   author:       "Luis Lasso"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Flappy-style VGA game with parallax city, sound, gamepad support and an autopilot demo mode"      # One line description of what your project does
+  description:  "Flappy-style VGA game with parallax city, sound and an autopilot demo mode"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     25175000       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -19,20 +19,19 @@ project:
   source_files:
     - "project.v"
     - "hvsync_generator.v"
-    - "gamepad_pmod.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "FLAP (toggle)"
+  ui[0]: "FLAP (every change)"
   ui[1]: "AUTOPILOT"
-  ui[2]: ""
+  ui[2]: "FLAP (button)"
   ui[3]: ""
-  ui[4]: "GAMEPAD_LATCH"
-  ui[5]: "GAMEPAD_CLK"
-  ui[6]: "GAMEPAD_DATA"
-  ui[7]: "EASY_MODE"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
 
   # Outputs
   uo[0]: "R1"
