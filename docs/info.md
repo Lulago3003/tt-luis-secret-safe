@@ -22,9 +22,13 @@ The game is built from a few hardware blocks:
   effect), the pipes with caps and shading, the ground with scrolling stripes, the 16x12 bird
   sprite (with an animated wing), and the text ("LUIS" title, score and best score) using a
   3x5 pixel font.
-- **Sound**: 1-bit square waves and noise for flapping, scoring and crashing, on `uio[7]`.
+- **Sound**: 1-bit square waves and noise for flapping, scoring and crashing, on `uio[7]`. The
+  scanline counter doubles as the tone generator, so the sound costs almost no extra logic.
 - **Autopilot**: when `ui[1]` is high, the chip plays by itself, flapping when the bird falls
   near the bottom of the next gap. Great for demos.
+
+To fit in a single tile, the two pipes share one position register (they are always 352 px
+apart) and one renderer: at most one pipe can be under the beam at any time.
 
 ![Gameplay](gameplay.png)
 
@@ -34,19 +38,18 @@ Connect a TinyVGA Pmod to the outputs and a VGA monitor, and set the clock to 25
 (25.2 MHz also works).
 
 - Title screen: the big "LUIS" title and the best score.
-- Flap: press A, B, X, Y, Up or Start on the Gamepad Pmod, or toggle `ui[0]` (every change of
-  `ui[0]` is one flap, so a DIP switch or a button both work).
+- Flap: flip the `ui[0]` switch (every change of `ui[0]` is one flap), or press a push button
+  connected to `ui[2]` (one flap per press).
 - Fly through the gaps between the pipes. Each pipe you pass is one point.
 - When you crash, the screen flashes and the bird falls. Press again to go back to the title.
 - `ui[1]` = 1: autopilot (demo mode), the game plays by itself forever.
-- `ui[7]` = 1: easy mode (bigger gaps, slower pipes).
 
 You can also play it in the browser with the Tiny Tapeout VGA Playground: open
-`https://vga-playground.com/?repo=<this repository URL>`, enable the gamepad and press `a` to flap,
-or press `0` on the keyboard.
+`https://vga-playground.com/?repo=<this repository URL>` and press `0` on the keyboard to flap
+(`1` turns the autopilot on and off).
 
 ## External hardware
 
 - [TinyVGA Pmod](https://github.com/mole99/tiny-vga) on the output pins, and a VGA monitor.
-- Optional: [Gamepad Pmod](https://github.com/psychogenic/gamepad-pmod) on the input pins.
+- Optional: a push button on `ui[2]`.
 - Optional: an audio Pmod or a small speaker/amplifier on `uio[7]` for sound.
