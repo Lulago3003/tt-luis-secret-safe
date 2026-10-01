@@ -1,12 +1,12 @@
 # Tiny Tapeout project information (Wokwi project)
 project:
-  wokwi_id: "476651326703817729" # Set this to the ID of your Wokwi project (the number from the project's URL)
-  title: "LUIS Secret Safe" # Project title
+  wokwi_id: "476711427277175809" # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title: "LUIS ARCADE" # Project title
   author: "Luis Lasso" # Your name
   discord: "" # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description: "8-bit code safe that spells L-U-I-S on the 7-segment display when opened" # One line description of what your project does
+  description: "16 functions on one 7-segment display: text sign, dice and coin, counters and spinners, 3-digit combination safe" # One line description of what your project does
   language: "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz: 2 # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz: 128 # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1" # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -15,24 +15,24 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "code bit 0"
-  ui[1]: "code bit 1"
-  ui[2]: "code bit 2"
-  ui[3]: "code bit 3"
-  ui[4]: "code bit 4"
-  ui[5]: "code bit 5"
-  ui[6]: "code bit 6"
-  ui[7]: "code bit 7"
+  ui[0]: "PAUSE (sign, counter) / ROLL (dice) / digit bit 0 (safe)"
+  ui[1]: "DIRECTION 0=up 1=down / digit bit 1 (safe)"
+  ui[2]: "SPEED bit 0 / digit bit 2 (safe)"
+  ui[3]: "SPEED bit 1 / digit bit 3 (safe)"
+  ui[4]: "VARIANT bit 0 / ENTER (safe)"
+  ui[5]: "VARIANT bit 1 / CLEAR (safe)"
+  ui[6]: "MODE bit 0"
+  ui[7]: "MODE bit 1 (00 sign, 01 dice, 10 counter, 11 safe)"
 
   # Outputs
-  uo[0]: "segment A"
-  uo[1]: "segment B"
-  uo[2]: "segment C"
-  uo[3]: "segment D"
-  uo[4]: "segment E"
-  uo[5]: "segment F"
-  uo[6]: "segment G"
-  uo[7]: "dot (blinks when locked)"
+  uo[0]: "segment a"
+  uo[1]: "segment b"
+  uo[2]: "segment c"
+  uo[3]: "segment d"
+  uo[4]: "segment e"
+  uo[5]: "segment f"
+  uo[6]: "segment g"
+  uo[7]: "decimal point (dp)"
 
   # Bidirectional pins
   uio[0]: ""
