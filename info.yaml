@@ -1,39 +1,38 @@
 # Tiny Tapeout project information (Wokwi project)
 project:
-  wokwi_id:     0       # Set this to the ID of your Wokwi project (the number from the project's URL)
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
-  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  wokwi_id: "476651326703817729" # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title: "LUIS Secret Safe" # Project title
+  author: "Luis Lasso" # Your name
+  discord: "" # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description: "8-bit code safe that spells L-U-I-S on the 7-segment display when opened" # One line description of what your project does
+  language: "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz: 2 # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
-
+  tiles: "1x1" # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "code bit 0"
+  ui[1]: "code bit 1"
+  ui[2]: "code bit 2"
+  ui[3]: "code bit 3"
+  ui[4]: "code bit 4"
+  ui[5]: "code bit 5"
+  ui[6]: "code bit 6"
+  ui[7]: "code bit 7"
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "segment A"
+  uo[1]: "segment B"
+  uo[2]: "segment C"
+  uo[3]: "segment D"
+  uo[4]: "segment E"
+  uo[5]: "segment F"
+  uo[6]: "segment G"
+  uo[7]: "dot (blinks when locked)"
 
   # Bidirectional pins
   uio[0]: ""
