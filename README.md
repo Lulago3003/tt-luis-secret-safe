@@ -1,24 +1,28 @@
-![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/wokwi_test/badge.svg) ![](../../workflows/fpga/badge.svg)
+![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) ![](../../workflows/fpga/badge.svg)
 
-# Tiny Tapeout Wokwi Project Template
+# Flappy Luis - a video game chip for Tiny Tapeout
 
-- [Read the documentation for project](docs/info.md)
+A Flappy-style VGA game made only of digital logic: 640x480 color video, parallax city background,
+pixel-perfect collisions, score and best score, sound effects and an autopilot demo mode, all in a
+single Tiny Tapeout tile. Designed by Luis Lasso.
+
+- [Read the datasheet](docs/info.md)
+- Play it in your browser: [VGA Playground](https://vga-playground.com/?repo=https://github.com/Lulago3003/tt-luis-secret-safe)
+
+## Controls
+
+| Input | Function |
+|-------|----------|
+| `ui[0]` | Flap (every change of the switch is one flap; key `0` in the VGA Playground) |
+| `ui[2]` | Flap (push button, one flap per press) |
+| `ui[1]` | Autopilot / demo mode (key `1` in the VGA Playground) |
 
 ## What is Tiny Tapeout?
 
-Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital and analog designs manufactured on a real chip.
+Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your
+digital and analog designs manufactured on a real chip.
 
 To learn more and get started, visit https://tinytapeout.com.
-
-## Wokwi Projects
-
-Edit the [info.yaml](info.yaml) and change the `wokwi_id` to the ID of your Wokwi project. You can find the ID in the URL of your project, it's the big number after `wokwi.com/projects/`.
-
-The GitHub action will automatically fetch the digital netlist from Wokwi and build the ASIC files.
-
-## Enable GitHub actions to build the results page
-
-- [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
 
 ## Resources
 
@@ -27,13 +31,3 @@ The GitHub action will automatically fetch the digital netlist from Wokwi and bu
 - [Learn how semiconductors work](https://tinytapeout.com/siliwiz/)
 - [Join the community](https://tinytapeout.com/discord)
 - [Build your design locally](https://www.tinytapeout.com/guides/local-hardening/)
-
-## What next?
-
-- [Submit your design to the next shuttle](https://app.tinytapeout.com/).
-- Edit [this README](README.md) and explain your design, how it works, and how to test it.
-- Share your project on your social network of choice:
-  - LinkedIn [#tinytapeout](https://www.linkedin.com/search/results/content/?keywords=%23tinytapeout) [@TinyTapeout](https://www.linkedin.com/company/100708654/)
-  - Mastodon [#tinytapeout](https://chaos.social/tags/tinytapeout) [@matthewvenn](https://chaos.social/@matthewvenn)
-  - X (formerly Twitter) [#tinytapeout](https://twitter.com/hashtag/tinytapeout) [@tinytapeout](https://twitter.com/tinytapeout)
-  - Bluesky [@tinytapeout.com](https://bsky.app/profile/tinytapeout.com)
