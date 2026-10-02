@@ -3,7 +3,7 @@ project:
   title:        "Flappy Luis"      # Project title
   author:       "Luis Lasso"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Flappy-style VGA game with parallax city, sound and an autopilot demo mode"      # One line description of what your project does
+  description:  "Flappy-style VGA game: 4 levels, day and night, game over, best score, sound and autopilot"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     25175000       # Clock frequency in Hz (or 0 if not applicable)
 
